@@ -8,6 +8,7 @@
     "prod:build": "rimraf build && babel src -d build --ignore .test.js",
     "prod:start": "cross-env NODE_ENV=production pm2 start build/index.js --name bt-chatbot && pm2 logs",
     "prod:stop": "pm2 delete bt-chatbot",
+    "heroku-postbuild": "yarn prod:build",
     "test": "eslint src && jest --coverage"
   },
   "repository": "https://github.com/darkamenosa/bt-chatbot.git",
