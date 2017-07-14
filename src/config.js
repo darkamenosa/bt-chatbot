@@ -7,7 +7,6 @@ export default {
   profile: process.env.NODE_ENV || 'development',
   server: {
     port: process.env.PORT || 3000,
-    url: process.env.SERVER_URL,
   },
   messenger: {
     app: {
